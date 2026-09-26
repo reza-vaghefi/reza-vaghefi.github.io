@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reza Vaghefi</title>
+<meta name="description" content="Reza Vaghefi — Senior Staff Software Engineer specializing in machine learning, deep learning, and backend engineering.">
+<style>
+  :root {
+    --sidebar-bg: #1b2733;
+    --sidebar-text: #cbd5e1;
+    --accent: #3b82c4;
+    --accent-light: #5fa3dd;
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #24313f;
+    --muted: #66788c;
+    --border: #e4e8ec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    width: 300px;
+    flex-shrink: 0;
+    padding: 48px 32px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #234a6b);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 auto 24px;
+    letter-spacing: 1px;
+  }
+  .sidebar h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    margin: 0 0 6px;
+  }
+  .sidebar .role {
+    text-align: center;
+    color: var(--accent-light);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .sidebar .location {
+    text-align: center;
+    color: var(--sidebar-text);
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  .sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 16px 0;
+  }
+  .sidebar-links li { margin-bottom: 10px; font-size: 14px; }
+  .sidebar-links li:last-child { margin-bottom: 0; }
+  .sidebar-links a { color: var(--sidebar-text); display: flex; align-items: center; gap: 10px; }
+  .sidebar-links a:hover { color: #fff; text-decoration: none; }
+  .sidebar-links svg { flex-shrink: 0; opacity: 0.8; }
+
+  /* Main content */
+  .main {
+    flex: 1;
+    padding: 56px 64px;
+    max-width: 860px;
+  }
+  section { margin-bottom: 48px; }
+  section h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text);
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+  }
+  .about-text { font-size: 16px; color: var(--text); max-width: 680px; }
+
+  .job {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+  }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 4px;
+  }
+  .job-title { font-size: 17px; font-weight: 700; }
+  .job-company { color: var(--accent); font-weight: 600; }
+  .job-meta { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  .job ul { margin: 12px 0 0; padding-left: 20px; }
+  .job li { margin-bottom: 8px; font-size: 15px; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 14px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 28px;
+  }
+  .skills-grid dt {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 14px;
+  }
+  .skills-grid dd {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .badge {
+    background: #eaf2fa;
+    color: #234a6b;
+    border: 1px solid #d3e5f4;
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 13px;
+  }
+
+  .edu {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 28px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+  }
+  .edu-school { font-weight: 700; }
+  .edu-degree { color: var(--muted); font-size: 14px; margin-top: 2px; display: block; }
+  .edu-meta { color: var(--muted); font-size: 13px; white-space: nowrap; }
+
+  footer {
+    color: var(--muted);
+    font-size: 13px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 800px) {
+    .layout { flex-direction: column; }
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 36px 24px;
+    }
+    .main { padding: 36px 24px; max-width: 100%; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .skills-grid dt { margin-bottom: -6px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="avatar">RV</div>
+    <h1>Reza Vaghefi</h1>
+    <div class="role">Senior Staff Software Engineer</div>
+    <div class="location">San Francisco Bay Area, CA</div>
+
+    <ul class="sidebar-links">
+      <li>
+        <a href="mailto:r.vaghefi@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+          r.vaghefi@gmail.com
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/reza-m-b1829516/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-3.96 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48z"/></svg>
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/reza-vaghefi" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.35c.85 0 1.7.12 2.5.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          GitHub
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <section id="about">
+      <h2>About</h2>
+      <p class="about-text">
+        Experienced software engineer specializing in machine learning, deep learning, Python development,
+        algorithms, and backend web development. Currently a Machine Learning Engineer at Meta,
+        working on App and Gaming Ads ranking models.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span><span class="job-title">Machine Learning Engineer</span> · <span class="job-company">Meta</span></span>
+          <span class="job-meta">Jan 2025 – Current · Bay Area, CA</span>
+        </div>
+        <ul>
+          <li>Working on ranking models for App and Gaming Ads.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span><span class="job-title">Senior Staff Software Engineer</span> · <span class="job-company">Qualcomm</span></span>
+          <span class="job-meta">Oct 2019 – Jan 2025 · Santa Clara, CA</span>
+        </div>
+        <ul>
+          <li>Designed and developed an end-to-end machine learning pipeline for object detection using YOLO V5, keypoint estimation, and classification using EfficientNet B5 from satellite images, with significant preprocessing/postprocessing for extra-large imagery.</li>
+          <li>Deployed and compared quantization techniques such as PTQ, QAT, and LoRA for large language models (LLMs) including LLaMA-2 and Mistral.</li>
+          <li>Developed a computer vision pipeline that detects helmet impacts on the football field, combining a detection model with a 3D CNN to reduce false positives.</li>
+          <li>Developed an NLP pipeline based on BERT and RoBERTa to extract the span of text reflecting a given sentiment.</li>
+          <li>Built a Python wrapper for Pandas providing NLP methods (translation, summarization, sentiment analysis) on a DataFrame using LLM APIs.</li>
+          <li>Designed and developed the backend (Flask) and frontend (Streamlit) for a chatbot that runs data processing on Snowflake using the OpenAI Assistant API and function calls.</li>
+          <li>Led a team of 5 engineers designing and developing machine learning pipelines.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span><span class="job-title">Senior Software Engineer</span> · <span class="job-company">NEC Advanced Networks</span></span>
+          <span class="job-meta">Jan 2015 – Oct 2019 · Santa Clara, CA</span>
+        </div>
+        <ul>
+          <li>Designed and developed an end-to-end machine learning pipeline to predict population density on the ground from satellite images using deep learning computer vision models.</li>
+          <li>Developed a weighted KNN model to predict phone location from RSSI measurements, and an LSTM model to predict location delta from IMU and geomagnetic field readings to improve location prediction.</li>
+          <li>Developed machine learning algorithms to predict Wi-Fi system modulation scheme (multi-class classification) from transmission properties, including data cleaning, cross-validation, and feature/model selection.</li>
+          <li>Built a web application from scratch (HTML frontend, Flask backend) that ran cellular system simulations and visualized results on Google Maps, with JWT authentication and both SQL (MySQL) and NoSQL (MongoDB/Redis) databases.</li>
+          <li>Built a pipeline to process large volumes of cellular network KPI data into PostgreSQL and visualize results in Tableau.</li>
+          <li>Developed machine learning models such as Random Forest and LightGBM to predict path-loss characteristics in complex wireless networks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="skills-grid">
+        <dt>Programming</dt>
+        <dd>
+          <span class="badge">Python</span><span class="badge">C/C++</span><span class="badge">Java</span>
+          <span class="badge">Scala</span><span class="badge">R</span><span class="badge">MATLAB</span>
+          <span class="badge">HTML/CSS</span><span class="badge">SQL</span><span class="badge">Bash</span>
+        </dd>
+        <dt>Technologies</dt>
+        <dd>
+          <span class="badge">Docker</span><span class="badge">Git</span><span class="badge">Perforce</span>
+          <span class="badge">Linux</span><span class="badge">Kubernetes</span><span class="badge">Conda</span>
+          <span class="badge">AWS</span><span class="badge">Azure</span><span class="badge">Heroku</span>
+        </dd>
+        <dt>ML / DL</dt>
+        <dd>
+          <span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">PyTorch</span>
+          <span class="badge">pySpark</span><span class="badge">Pandas/Koalas</span><span class="badge">scikit-learn</span>
+          <span class="badge">NumPy</span><span class="badge">SciPy</span><span class="badge">dplyr</span>
+        </dd>
+        <dt>Visualization</dt>
+        <dd>
+          <span class="badge">Matplotlib</span><span class="badge">Seaborn</span><span class="badge">Plotly</span>
+          <span class="badge">Dash</span><span class="badge">Altair</span><span class="badge">Tableau</span>
+        </dd>
+        <dt>Database</dt>
+        <dd>
+          <span class="badge">MySQL</span><span class="badge">PostgreSQL</span><span class="badge">SQLite</span>
+          <span class="badge">MongoDB</span><span class="badge">Redis</span><span class="badge">Memcached</span>
+          <span class="badge">Snowflake</span>
+        </dd>
+      </dl>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu">
+        <span>
+          <span class="edu-school">Virginia Tech</span>
+          <span class="edu-degree">Ph.D. in Electrical and Computer Engineering · GPA 4.0/4.0</span>
+        </span>
+        <span class="edu-meta">Sep 2011 – Dec 2014 · Blacksburg, VA</span>
+      </div>
+      <div class="edu">
+        <span>
+          <span class="edu-school">Chalmers University of Technology</span>
+          <span class="edu-degree">M.S. in Electrical and Computer Engineering · GPA 4.0/4.0</span>
+        </span>
+        <span class="edu-meta">Sep 2008 – May 2011 · Gothenburg, Sweden</span>
+      </div>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> Reza Vaghefi
+    </footer>
+  </main>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
