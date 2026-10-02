@@ -1,0 +1,260 @@
+<title>Hokm Privacy Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --ink: #1c2530;
+    --ink-soft: #5b6675;
+    --accent: #21547f;
+    --accent-soft: #e4ecf3;
+    --line: #dce3ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #10161d;
+      --surface: #18222f;
+      --ink: #e7ecf2;
+      --ink-soft: #93a1b0;
+      --accent: #74acdb;
+      --accent-soft: #1e2e3d;
+      --line: #2a3746;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #10161d;
+    --surface: #18222f;
+    --ink: #e7ecf2;
+    --ink-soft: #93a1b0;
+    --accent: #74acdb;
+    --accent-soft: #1e2e3d;
+    --line: #2a3746;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.doc-head {
+    margin-bottom: 40px;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .mark svg { width: 14px; height: 14px; fill: var(--accent); }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(34px, 6vw, 46px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 18px 0 10px;
+    text-wrap: balance;
+  }
+  .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+
+  .lede {
+    margin: 28px 0 0;
+    padding: 20px 22px;
+    background: var(--accent-soft);
+    border-radius: 10px;
+    font-size: 16.5px;
+    color: var(--ink);
+  }
+  .lede strong { color: var(--accent); }
+
+  nav.toc {
+    margin: 32px 0 8px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+  nav.toc a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  nav.toc a:hover,
+  nav.toc a:focus-visible { border-color: var(--accent); color: var(--accent); }
+
+  main { margin-top: 48px; }
+
+  section {
+    padding: 34px 0;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 24px;
+  }
+  section:first-of-type { border-top: none; padding-top: 0; }
+
+  .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+  }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 6px 0 14px;
+    text-wrap: balance;
+  }
+  p { margin: 0 0 14px; max-width: 62ch; }
+  p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0 0 14px; padding-left: 22px; max-width: 60ch; }
+  li { margin-bottom: 8px; }
+  li:last-child { margin-bottom: 0; }
+
+  code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9em;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+  }
+
+  .fill-in {
+    display: inline-block;
+    border-bottom: 1px dashed var(--ink-soft);
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .suits {
+    letter-spacing: 0.3em;
+    color: var(--line);
+    font-size: 14px;
+  }
+  footer .back {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  footer .back:hover, footer .back:focus-visible { color: var(--accent); }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 44px 18px 72px; }
+  }
+</style>
+
+<div class="wrap">
+  <header class="doc-head">
+    <span class="mark">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 7 3 10.5 3 15a5 5 0 0 0 8.2 3.8c-.2 1.4-.9 2.6-2.2 3.6a.6.6 0 0 0 .4 1.1h5.2a.6.6 0 0 0 .4-1.1c-1.3-1-2-2.2-2.2-3.6A5 5 0 0 0 21 15c0-4.5-5-8-9-13z"/></svg>
+      Hokm!
+    </span>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Effective October 1, 2026 — v1.0</div>
+
+    <p class="lede"><strong>Short version:</strong> Hokm doesn't collect, transmit, or share anything. There are no accounts, no network requests, and no analytics or advertising SDKs anywhere in the app. The only data that exists is a small set of game statistics saved on your own device, which you can erase by deleting the app.</p>
+
+    <nav class="toc" aria-label="Sections">
+      <a href="#collect">What we collect</a>
+      <a href="#device">On your device</a>
+      <a href="#share">Sharing</a>
+      <a href="#children">Children</a>
+      <a href="#changes">Changes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="collect">
+      <div class="num">01</div>
+      <h2>What we collect</h2>
+      <p>Nothing. Hokm has no sign-up, no login, and no user accounts — there's nothing to identify you by in the first place. The app makes no network requests of any kind, so no gameplay data, device information, or usage activity is ever sent anywhere, by us or by anyone else.</p>
+      <p>There are no third-party SDKs in the app — no analytics, no crash reporting, no advertising, no tracking of any kind.</p>
+    </section>
+
+    <section id="device">
+      <div class="num">02</div>
+      <h2>What stays on your device</h2>
+      <p>Hokm saves a small amount of information locally, using Apple's standard on-device storage (<code>UserDefaults</code>). It never leaves your device:</p>
+      <ul>
+        <li><strong>Game statistics</strong> — lifetime totals like games and hands won or lost, time played, and how you did as Hâkem.</li>
+        <li><strong>Your card-back preference</strong> — which design you last picked in Settings.</li>
+      </ul>
+      <p>This information is tied to the app, not to you personally, and is erased automatically if you delete Hokm from your device.</p>
+    </section>
+
+    <section id="share">
+      <div class="num">03</div>
+      <h2>Sharing &amp; third parties</h2>
+      <p>We don't share anything, because we don't collect anything to share. Hokm doesn't integrate with any third-party service, and none of the local statistics above are ever transmitted, sold, or made available to anyone.</p>
+    </section>
+
+    <section id="children">
+      <div class="num">04</div>
+      <h2>Children's privacy</h2>
+      <p>Hokm is suitable for a general audience, including children. Since the app collects no personal information from any user — of any age — there is nothing collected from children that would require parental consent.</p>
+    </section>
+
+    <section id="changes">
+      <div class="num">05</div>
+      <h2>Changes to this policy</h2>
+      <p>If Hokm's data practices ever change — for example, if a future update adds an online feature — this page will be updated first, with a new effective date above, before that update ships.</p>
+    </section>
+
+    <section id="contact">
+      <div class="num">06</div>
+      <h2>Contact</h2>
+      <p>Questions about this policy can be sent to <a href="mailto:reza.card.games@gmail.com" style="color: var(--accent);">reza.card.games@gmail.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span class="suits">♠ ♥ ♣ ♦</span>
+    <a class="back" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+  </footer>
+</div>
