@@ -1,4 +1,4 @@
-<title>Hokm Privacy Policy</title>
+<title>Hokm! Support</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
 
@@ -75,12 +75,6 @@
     margin: 18px 0 10px;
     text-wrap: balance;
   }
-  .meta {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12.5px;
-    color: var(--ink-soft);
-    letter-spacing: 0.04em;
-  }
 
   .lede {
     margin: 28px 0 0;
@@ -91,6 +85,32 @@
     color: var(--ink);
   }
   .lede strong { color: var(--accent); }
+
+  .contact-row {
+    margin: 28px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .contact-row a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--surface);
+    background: var(--accent);
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 999px;
+    transition: opacity 0.15s;
+  }
+  .contact-row a:hover, .contact-row a:focus-visible { opacity: 0.85; }
+  .contact-row a.secondary {
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
 
   nav.toc {
     margin: 32px 0 8px;
@@ -111,8 +131,7 @@
     border-radius: 999px;
     transition: border-color 0.15s, color 0.15s;
   }
-  nav.toc a:hover,
-  nav.toc a:focus-visible { border-color: var(--accent); color: var(--accent); }
+  nav.toc a:hover, nav.toc a:focus-visible { border-color: var(--accent); color: var(--accent); }
 
   main { margin-top: 48px; }
 
@@ -123,25 +142,24 @@
   }
   section:first-of-type { border-top: none; padding-top: 0; }
 
-  .num {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    color: var(--accent);
-    letter-spacing: 0.06em;
-  }
   h2 {
     font-family: 'Fraunces', serif;
     font-weight: 600;
     font-size: 24px;
-    margin: 6px 0 14px;
+    margin: 0 0 14px;
     text-wrap: balance;
   }
   p { margin: 0 0 14px; max-width: 62ch; }
   p:last-child { margin-bottom: 0; }
 
-  ul { margin: 0 0 14px; padding-left: 22px; max-width: 60ch; }
-  li { margin-bottom: 8px; }
-  li:last-child { margin-bottom: 0; }
+  .faq-item { margin-bottom: 22px; }
+  .faq-item:last-child { margin-bottom: 0; }
+  .faq-q {
+    font-weight: 600;
+    margin: 0 0 6px;
+    max-width: 62ch;
+  }
+  .faq-a { margin: 0; max-width: 62ch; color: var(--ink-soft); }
 
   code {
     font-family: 'IBM Plex Mono', monospace;
@@ -150,13 +168,6 @@
     color: var(--accent);
     padding: 0.15em 0.4em;
     border-radius: 4px;
-  }
-
-  .fill-in {
-    display: inline-block;
-    border-bottom: 1px dashed var(--ink-soft);
-    color: var(--ink-soft);
-    font-style: italic;
   }
 
   footer {
@@ -174,14 +185,14 @@
     color: var(--line);
     font-size: 14px;
   }
-  footer .back {
+  footer a {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12.5px;
     color: var(--ink-soft);
     text-decoration: none;
     letter-spacing: 0.03em;
   }
-  footer .back:hover, footer .back:focus-visible { color: var(--accent); }
+  footer a:hover, footer a:focus-visible { color: var(--accent); }
 
   @media (max-width: 480px) {
     .wrap { padding: 44px 18px 72px; }
@@ -194,67 +205,62 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 7 3 10.5 3 15a5 5 0 0 0 8.2 3.8c-.2 1.4-.9 2.6-2.2 3.6a.6.6 0 0 0 .4 1.1h5.2a.6.6 0 0 0 .4-1.1c-1.3-1-2-2.2-2.2-3.6A5 5 0 0 0 21 15c0-4.5-5-8-9-13z"/></svg>
       Hokm!
     </span>
-    <h1>Privacy Policy</h1>
-    <div class="meta">Effective October 1, 2026 — v1.0</div>
+    <h1>Support</h1>
 
-    <p class="lede"><strong>Short version:</strong> Hokm doesn't collect, transmit, or share anything. There are no accounts, no network requests, and no analytics or advertising SDKs anywhere in the app. The only data that exists is a small set of game statistics saved on your own device, which you can erase by deleting the app.</p>
+    <p class="lede"><strong>Need help?</strong> Email us and we'll get back to you — questions, bug reports, and feedback are all welcome.</p>
+
+    <div class="contact-row">
+      <a href="mailto:reza.card.games@gmail.com?subject=Hokm%20Support">reza.card.games@gmail.com</a>
+      <a class="secondary" href="hokm-privacy.html">Privacy Policy</a>
+    </div>
 
     <nav class="toc" aria-label="Sections">
-      <a href="#collect">What we collect</a>
-      <a href="#device">On your device</a>
-      <a href="#share">Sharing</a>
-      <a href="#children">Children</a>
-      <a href="#changes">Changes</a>
-      <a href="#contact">Contact</a>
+      <a href="#bugs">Reporting a bug</a>
+      <a href="#rules">How to play</a>
+      <a href="#faq">FAQ</a>
     </nav>
   </header>
 
   <main>
-    <section id="collect">
-      <div class="num">01</div>
-      <h2>What we collect</h2>
-      <p>Nothing. Hokm has no sign-up, no login, and no user accounts — there's nothing to identify you by in the first place. The app makes no network requests of any kind, so no gameplay data, device information, or usage activity is ever sent anywhere, by us or by anyone else.</p>
-      <p>There are no third-party SDKs in the app — no analytics, no crash reporting, no advertising, no tracking of any kind.</p>
+    <section id="bugs">
+      <h2>Reporting a bug</h2>
+      <p>The fastest way to report a problem is from inside the app: open <strong>Settings → Report a Bug</strong>. It opens an email already addressed to us with your app version, iOS version, and device model attached, so we don't have to ask for that separately.</p>
+      <p>If you'd rather write in directly, email <a href="mailto:reza.card.games@gmail.com">reza.card.games@gmail.com</a> and describe what happened — what you expected, what happened instead, and roughly when in the hand it occurred, if relevant.</p>
     </section>
 
-    <section id="device">
-      <div class="num">02</div>
-      <h2>What stays on your device</h2>
-      <p>Hokm saves a small amount of information locally, using Apple's standard on-device storage (<code>UserDefaults</code>). It never leaves your device:</p>
-      <ul>
-        <li><strong>Game statistics</strong> — lifetime totals like games and hands won or lost, time played, and how you did as Hâkem.</li>
-        <li><strong>Your card-back preference</strong> — which design you last picked in Settings.</li>
-      </ul>
-      <p>This information is tied to the app, not to you personally, and is erased automatically if you delete Hokm from your device.</p>
+    <section id="rules">
+      <h2>How to play</h2>
+      <p>Hokm is a 4-player, partnership trick-taking card game. You and your partner play as a team against the other two players. Each hand, one player becomes <strong>Hâkem</strong> and chooses the trump suit (Hokm) based on their first five cards. Follow suit when you can — the highest card of the suit led wins the trick, unless someone plays trump.</p>
+      <p>Win 7 of the 13 tricks in a hand to score a point. Sweep all 13 tricks for a <strong>Kot</strong> — worth 2 points if your team was Hâkem, or 3 if it wasn't. First team to 7 points wins the game.</p>
     </section>
 
-    <section id="share">
-      <div class="num">03</div>
-      <h2>Sharing &amp; third parties</h2>
-      <p>We don't share anything, because we don't collect anything to share. Hokm doesn't integrate with any third-party service, and none of the local statistics above are ever transmitted, sold, or made available to anyone.</p>
-    </section>
+    <section id="faq">
+      <h2>FAQ</h2>
 
-    <section id="children">
-      <div class="num">04</div>
-      <h2>Children's privacy</h2>
-      <p>Hokm is suitable for a general audience, including children. Since the app collects no personal information from any user — of any age — there is nothing collected from children that would require parental consent.</p>
-    </section>
+      <div class="faq-item">
+        <p class="faq-q">What does Autoplay do?</p>
+        <p class="faq-a">Turns on the same AI that plays for your opponents, just for your own hand — useful if you need to step away mid-hand. It turns itself back off once the hand ends.</p>
+      </div>
 
-    <section id="changes">
-      <div class="num">05</div>
-      <h2>Changes to this policy</h2>
-      <p>If Hokm's data practices ever change — for example, if a future update adds an online feature — this page will be updated first, with a new effective date above, before that update ships.</p>
-    </section>
+      <div class="faq-item">
+        <p class="faq-q">Can I change the table color or card design?</p>
+        <p class="faq-a">Yes — open Settings from the top bar to pick a table color and one of two card back designs.</p>
+      </div>
 
-    <section id="contact">
-      <div class="num">06</div>
-      <h2>Contact</h2>
-      <p>Questions about this policy can be sent to <a href="mailto:reza.card.games@gmail.com" style="color: var(--accent);">reza.card.games@gmail.com</a>, or visit the <a href="hokm-support.html" style="color: var(--accent);">Support</a> page.</p>
+      <div class="faq-item">
+        <p class="faq-q">Is my game data private?</p>
+        <p class="faq-a">Yes. Hokm doesn't collect or transmit anything — your stats are stored only on your device. See the <a href="hokm-privacy.html">Privacy Policy</a> for details.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Does Hokm support online multiplayer?</p>
+        <p class="faq-a">Not yet — today it's you and an AI partner against two AI opponents. Online play is something we're considering for a future update.</p>
+      </div>
     </section>
   </main>
 
   <footer>
     <span class="suits">♠ ♥ ♣ ♦</span>
-    <a class="back" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
   </footer>
 </div>
