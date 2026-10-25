@@ -195,12 +195,13 @@
       Hokm!
     </span>
     <h1>Privacy Policy</h1>
-    <div class="meta">Effective October 6, 2026 — v1.1</div>
+    <div class="meta">Effective October 24, 2026 — v2.0</div>
 
-    <p class="lede"><strong>Short version:</strong> Hokm has no accounts and saves only a small set of game statistics on your own device. The app does show ads, served by Google AdMob, which is the one case where data leaves your device — details below.</p>
+    <p class="lede"><strong>Short version:</strong> Hokm has no user accounts, no sign-up, and no password. Single-player play saves only a small set of game statistics on your own device. Multiplayer rooms are relayed through Google Firebase so the players in your room can see the same live game. The app also shows ads, served by Google AdMob.</p>
 
     <nav class="toc" aria-label="Sections">
       <a href="#collect">What we collect</a>
+      <a href="#multiplayer">Multiplayer</a>
       <a href="#ads">Advertising</a>
       <a href="#device">On your device</a>
       <a href="#share">Sharing</a>
@@ -214,12 +215,25 @@
     <section id="collect">
       <div class="num">01</div>
       <h2>What we collect</h2>
-      <p>Hokm itself has no sign-up, no login, and no user accounts — there's nothing to identify you by in the first place. We don't operate any servers and don't collect anything ourselves.</p>
-      <p>The app does include one third-party SDK, Google AdMob, used to show ads. See "Advertising" below for what that involves.</p>
+      <p>Hokm itself has no sign-up, no login, and no user accounts — there's nothing to identify you by in the first place. We don't operate any servers of our own.</p>
+      <p>The app includes two third-party SDKs: Google Firebase, used only for multiplayer rooms, and Google AdMob, used to show ads. See "Multiplayer" and "Advertising" below for what each involves.</p>
+    </section>
+
+    <section id="multiplayer">
+      <div class="num">02</div>
+      <h2>Multiplayer</h2>
+      <p>Multiplayer is entirely optional — single-player play never touches the network. If you create or join a multiplayer room:</p>
+      <ul>
+        <li><strong>Anonymous sign-in</strong> — Hokm signs you in anonymously through Firebase Authentication. No email, password, or personal information is involved, just a random identifier tied to your device's copy of the app.</li>
+        <li><strong>Live game data</strong> — the display name and avatar you choose, the room code, and the live game state (whose turn it is, which cards are played, the score) are stored in Firebase's Firestore database and synced to the other players in your room in real time.</li>
+        <li><strong>Room codes are private</strong> — a room is only reachable by whoever has its code; Hokm never lists or shares rooms publicly.</li>
+        <li><strong>Automatic cleanup</strong> — room data is automatically deleted after about 24 hours of inactivity (no active heartbeat from the host).</li>
+      </ul>
+      <p>This data is governed by <a href="https://policies.google.com/privacy" style="color: var(--accent);">Google's privacy policy</a> as well as ours, since Firebase is Google infrastructure.</p>
     </section>
 
     <section id="ads">
-      <div class="num">02</div>
+      <div class="num">03</div>
       <h2>Advertising</h2>
       <p>Hokm shows a full-screen ad at natural breaks in play — after your team wins a hand — served through Google AdMob. Showing an ad requires a network request to Google, which can involve device identifiers and other information Google uses to select and measure ads. This is governed by <a href="https://policies.google.com/privacy" style="color: var(--accent);">Google's own privacy policy</a>, not ours.</p>
       <p>On iOS, the first time an ad would be shown you're asked for App Tracking Transparency permission. If you decline, Hokm and AdMob don't use your device's advertising identifier for cross-app tracking, and you'll still see ads — just less tailored ones.</p>
@@ -227,7 +241,7 @@
     </section>
 
     <section id="device">
-      <div class="num">03</div>
+      <div class="num">04</div>
       <h2>What stays on your device</h2>
       <p>Hokm saves a small amount of information locally, using Apple's standard on-device storage (<code>UserDefaults</code>). It never leaves your device:</p>
       <ul>
@@ -238,25 +252,25 @@
     </section>
 
     <section id="share">
-      <div class="num">04</div>
+      <div class="num">05</div>
       <h2>Sharing &amp; third parties</h2>
-      <p>Your local game statistics and preferences are never transmitted, sold, or shared with anyone. The one third party Hokm integrates with is Google AdMob, solely to show ads, as described above.</p>
+      <p>Your local game statistics and preferences are never transmitted, sold, or shared with anyone. Hokm integrates with two third parties: Google Firebase, solely to power multiplayer rooms, and Google AdMob, solely to show ads, both described above.</p>
     </section>
 
     <section id="children">
-      <div class="num">05</div>
+      <div class="num">06</div>
       <h2>Children's privacy</h2>
-      <p>Hokm itself collects no personal information from any user, of any age. The app does now serve ads via Google AdMob; if you're a parent evaluating this app for a child, Google's privacy policy explains how it handles data in its ad network.</p>
+      <p>Hokm itself collects no personal information from any user, of any age. The app serves ads via Google AdMob and, if multiplayer is used, relays gameplay data via Google Firebase; if you're a parent evaluating this app for a child, Google's privacy policy explains how it handles data in both.</p>
     </section>
 
     <section id="changes">
-      <div class="num">06</div>
+      <div class="num">07</div>
       <h2>Changes to this policy</h2>
-      <p>If Hokm's data practices ever change — for example, if a future update adds an online feature — this page will be updated first, with a new effective date above, before that update ships.</p>
+      <p>If Hokm's data practices ever change, this page will be updated first, with a new effective date above, before that update ships.</p>
     </section>
 
     <section id="contact">
-      <div class="num">07</div>
+      <div class="num">08</div>
       <h2>Contact</h2>
       <p>Questions about this policy can be sent to <a href="mailto:reza.card.games@gmail.com" style="color: var(--accent);">reza.card.games@gmail.com</a>, or visit the <a href="hokm-support.html" style="color: var(--accent);">Support</a> page.</p>
     </section>
